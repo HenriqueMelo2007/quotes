@@ -16,7 +16,7 @@ export function App() {
   const [randomNumber, setRandomNumber] = useState(getRandomInt(0, 15))
 
   return (
-    <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%'}}>
+    <Box sx={{backgroundColor: 'rgb(203, 168, 114)', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', height: '100vh', margin: '0', padding: '0', boxSizing: 'border-box'}}>
       <Quote randomNumber={randomNumber} ></Quote>
       <Button onClick={() => setRandomNumber(getRandomInt(0, 15))} variant='contained' sx={{backgroundColor: 'rgb(203, 168, 114)', color: 'rgb(0, 0, 0)', '&:hover': { backgroundColor: 'rgb(183, 148, 94)' } }} >New Quote</Button>
     </Box>
