@@ -1,5 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
+import { Typography } from "@mui/material";
+import Box from '@mui/material/Box';
 
 interface propsQuote {
   randomNumber: number,
@@ -20,9 +22,9 @@ export function Quote ({randomNumber}:propsQuote) {
 
 
   return (
-    <>
-      <p>{phrase}</p>
-      <p>{author}</p>
-    </> 
+    <Box>
+      <Typography variant="h4" sx={{ fontFamily: 'Caveat' }}>{phrase} </Typography>
+      <Typography sx={{ borderBottom: '1px solid rgb(255, 255, 255)' }} >- {author}</Typography>
+    </Box>
   )
 }

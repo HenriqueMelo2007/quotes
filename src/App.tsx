@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Quote } from './components/quote/quote'
 import Button from '@mui/material/Button'
+import Box from '@mui/material/Box';
+
 
 
 export function App() {
@@ -14,11 +16,9 @@ export function App() {
   const [randomNumber, setRandomNumber] = useState(getRandomInt(0, 15))
 
   return (
-    <>
-      <div className="box">
-        <Quote randomNumber={randomNumber} ></Quote>
-        <Button onClick={() => setRandomNumber(getRandomInt(0, 15))} variant='contained' sx={{backgroundColor: 'rgb(203, 168, 114)', color: 'rgb(255, 255, 255)', '&:hover': { backgroundColor: 'rgb(183, 148, 94)' } }} >New Quote</Button>
-      </div>
-    </>
+    <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%'}}>
+      <Quote randomNumber={randomNumber} ></Quote>
+      <Button onClick={() => setRandomNumber(getRandomInt(0, 15))} variant='contained' sx={{backgroundColor: 'rgb(203, 168, 114)', color: 'rgb(255, 255, 255)', '&:hover': { backgroundColor: 'rgb(183, 148, 94)' } }} >New Quote</Button>
+    </Box>
   )
 }
