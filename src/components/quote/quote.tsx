@@ -22,9 +22,9 @@ export function Quote ({randomNumber}:propsQuote) {
 
 
   return (
-    <Box>
+    <Box sx={{marginBottom: '30px'}}>
       <Typography variant="h4" sx={{ fontFamily: 'Caveat' }}>{phrase} </Typography>
-      <Typography sx={{ borderBottom: '1px solid rgb(255, 255, 255)' }} >- {author}</Typography>
+      <Typography variant="h5" sx={{ borderBottom: '1px solid rgb(0, 0, 0)', display: 'inline', fontFamily: 'Caveat' }} >- {author}</Typography>
     </Box>
   )
 }
