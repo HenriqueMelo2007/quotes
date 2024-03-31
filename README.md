@@ -2,7 +2,7 @@
 
 ## What is it?
 
-A page what shows a random quote of random authors.
+A page which shows a random quote of random authors.
 
 ## Demonstration
 
